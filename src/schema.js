@@ -1,5 +1,10 @@
 const { ApolloServer } = require("@apollo/server");
 const { merge } = require("lodash");
+
+const {
+  ApolloServerPluginLandingPageProductionDefault,
+} = require("@apollo/server/plugin/landingPage/default");
+
 const { weatherDefs, weatherResolvers } = require("./weather/scheme");
 const { whoisDefs, whoisResolvers } = require("./whois/scheme");
 const { jobSearchDefs, jobSearchResolvers } = require("./jobSearch/scheme");
@@ -37,4 +42,10 @@ module.exports = server = new ApolloServer({
     IMDbResolvers,
     yahooFinanceResolvers
   ),
+  plugins: [
+    ApolloServerPluginLandingPageProductionDefault({
+      footer: false,
+      graphRef: "myGraph@prod",
+    }),
+  ],
 });
