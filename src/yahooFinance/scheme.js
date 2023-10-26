@@ -1183,17 +1183,17 @@ type StockCompanyOutlookResponse {
 }
 
 type YahooFinanceNameSpace {
-  getMarketQuote(region: Region, symbol: String!): MarketQuoteResponse
-  getMarketMovers(region: Region, lang: String, count: Int, start: Int): MarketMoversResponse
-  getMarketSummary(region: Region): MarketSummaryResponse
+  getMarketQuote(region: Region!, symbol: String!): MarketQuoteResponse
+  getMarketMovers(region: Region!, lang: String, count: Int, start: Int): MarketMoversResponse
+  getMarketSummary(region: Region!): MarketSummaryResponse
   getMarketEarnings(region: Region!, startDate: Int, endDate: Int, size: Int): MarketEarningsResponse
   getMarketTrendingTickers(region: Region!): MarketTrendingTickersResponse
   getStockRecommendations(symbol: String!): StockRecommendationsResponse
   getStockSimilarities(symbol: String!): StockSimilaritiesResponse
   getStockUpgradeDowngradeHistory(symbol: String!, region:Region, lang:String): StockUpgradeDowngradeHistoryResponse
-  getStockChart(interval: StockChartInterval, symbol: String!, range: StockChartRange, region: Region, comparisons: String, includePrePost: Boolean, useYfid: Boolean, includeAdjustedClose: Boolean, events: String): StockChartResponse
-  getStockHistoricalData(symbol: String, region: Region): StockHistoricalDataResponse
-  getStockSummaryProfile(symbol: String, region: Region, lang: String): StockProfileResponse
+  getStockChart(interval: StockChartInterval!, symbol: String!, range: StockChartRange!, region: Region, comparisons: String, includePrePost: Boolean, useYfid: Boolean, includeAdjustedClose: Boolean, events: String): StockChartResponse
+  getStockHistoricalData(symbol: String!, region: Region): StockHistoricalDataResponse
+  getStockSummaryProfile(symbol: String!, region: Region, lang: String): StockProfileResponse
   getStockTimeSeries(symbol: String!, period1: Int!, period2: Int!, region: Region): StockTimeSeriesResponse
   getStockEarnings(symbol: String!, region: Region, lang: String): StockEarningsResponse
   getStockInsights(symbol: String!): StockInsightsResponse
