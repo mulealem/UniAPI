@@ -1186,8 +1186,8 @@ type YahooFinanceNameSpace {
   getMarketQuote(region: Region, symbol: String!): MarketQuoteResponse
   getMarketMovers(region: Region, lang: String, count: Int, start: Int): MarketMoversResponse
   getMarketSummary(region: Region): MarketSummaryResponse
-  getMarketEarnings(region: Region, startDate: Int, endDate: Int, size: Int): MarketEarningsResponse
-  getMarketTrendingTickers(region: Region): MarketTrendingTickersResponse
+  getMarketEarnings(region: Region!, startDate: Int, endDate: Int, size: Int): MarketEarningsResponse
+  getMarketTrendingTickers(region: Region!): MarketTrendingTickersResponse
   getStockRecommendations(symbol: String!): StockRecommendationsResponse
   getStockSimilarities(symbol: String!): StockSimilaritiesResponse
   getStockUpgradeDowngradeHistory(symbol: String!, region:Region, lang:String): StockUpgradeDowngradeHistoryResponse

@@ -49,7 +49,7 @@ module.exports = class IMDbAPI extends RESTDataSource {
 
   // startdate and enddate are in unix timestamp in milliseconds
   async getMarketEarnings(region = "US", startDate, endDate, size = "10") {
-    const data = await this.get(`market/v2/get-earnings`, {
+    const data = await this.get(`market/get-earnings`, {
       params: {
         region: region,
         startDate: startDate,
@@ -188,7 +188,7 @@ module.exports = class IMDbAPI extends RESTDataSource {
   }
 
   async getStockEarnings(symbol, region, lang = "en-US") {
-    const data = await this.get(`stock/v2/get-earnings`, {
+    const data = await this.get(`stock/get-earnings`, {
       params: {
         symbol: symbol,
         region: region,
@@ -210,7 +210,7 @@ module.exports = class IMDbAPI extends RESTDataSource {
   }
 
   async getStockESGScores(symbol, region, lang = "en-US") {
-    const data = await this.get(`stock/v2/get-esg-scores`, {
+    const data = await this.get(`stock/get-esg-scores`, {
       params: {
         symbol: symbol,
         region: region,
@@ -222,7 +222,7 @@ module.exports = class IMDbAPI extends RESTDataSource {
   }
 
   async getStockCompanyOutlook(symbol, region, lang = "en-US") {
-    const data = await this.get(`stock/v2/get-company-outlook`, {
+    const data = await this.get(`stock/get-company-outlook`, {
       params: {
         symbol: symbol,
         region: region,

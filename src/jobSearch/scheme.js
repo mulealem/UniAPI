@@ -254,7 +254,7 @@ type EstimatedSalaryResponse {
 # }
 
 type JobSearchNameSpace{
-  search(query: String, page: Int, num_pages: Int): JobSearchResponse
+  search(query: String!, page: Int, num_pages: Int): JobSearchResponse
   searchFilters(
     query: String!,
     date_posted: DATE_POSTED,
