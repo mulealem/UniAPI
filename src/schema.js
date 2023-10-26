@@ -45,7 +45,8 @@ module.exports = server = new ApolloServer({
   plugins: [
     ApolloServerPluginLandingPageProductionDefault({
       footer: false,
-      graphRef: "myGraph@prod",
+      // graphRef: "myGraph@prod",
+      embed: true,
     }),
   ],
 });
